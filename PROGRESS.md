@@ -1,7 +1,7 @@
 # PROGRESS — état courant du projet
 
 **Dernière mise à jour :** 2026-07-06
-**Phase en cours :** Phase 4 — Moteur de backtest
+**Phase en cours :** Phase 5 — Stratégies
 
 ## État des phases
 
@@ -11,8 +11,8 @@
 | 1 | Recherche web massive | ✅ (52 recherches, 26 lectures — docs/reports/PHASE_1.md) |
 | 2 | Architecture | ✅ (docs/reports/PHASE_2.md) |
 | 3 | Pipeline de données | ✅ (9 ans BTC/ETH, corrélations quantifiées — PHASE_3.md) |
-| 4 | Moteur de backtest | 🔄 en cours |
-| 5 | Stratégies | ⬜ |
+| 4 | Moteur de backtest | ✅ (3 tests anti-lookahead + canari, écart réf. 0,84 % — PHASE_4.md) |
+| 5 | Stratégies | 🔄 en cours |
 | 6 | Validation anti-illusion | ⬜ |
 | 7 | Exécution / paper trading | ⬜ |
 | 8 | Monitoring et rapports | ⬜ |
@@ -30,7 +30,7 @@
 
 ## TODO immédiat
 
-- [ ] Phase 4 : moteur de backtest + 3 tests anti-lookahead obligatoires
+- [ ] Phase 5 : ≥6 familles de stratégies + 2 baselines + tests unitaires
 
 ## Limites connues (à ce stade)
 
