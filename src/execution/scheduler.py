@@ -18,7 +18,7 @@ logger = get_logger("execution.scheduler")
 #: secondes de grâce après la clôture pour laisser l'exchange finaliser la bougie
 GRACE_SECONDS = 20
 
-_CRON_BY_TIMEFRAME = {
+_CRON_BY_TIMEFRAME: dict[str, dict[str, int | str]] = {
     "1h": {"minute": 0, "second": GRACE_SECONDS},
     "4h": {"hour": "0,4,8,12,16,20", "minute": 0, "second": GRACE_SECONDS},
     "1d": {"hour": 0, "minute": 0, "second": GRACE_SECONDS},

@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import time
 from collections import deque
+from collections.abc import Callable
 from dataclasses import dataclass
 from enum import Enum
 
@@ -37,7 +38,7 @@ class BreakerStatus:
 class CircuitBreakers:
     """État des circuit breakers, alimenté par l'exécuteur à chaque cycle."""
 
-    def __init__(self, config: RiskConfig, clock=time.time) -> None:
+    def __init__(self, config: RiskConfig, clock: Callable[[], float] = time.time) -> None:
         self.config = config
         self.clock = clock
         self.consecutive_losses = 0

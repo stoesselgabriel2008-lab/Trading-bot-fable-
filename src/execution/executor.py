@@ -67,7 +67,9 @@ class PaperExecutor:
         self.label = strategy_label
         self.data_exchange = build_exchange(exchange_cfg.data.live_source)
         self.broker = PaperBroker(
-            initial_cash=float(self.store.get_kv("cash", str(risk_cfg.capital.initial))),
+            initial_cash=float(
+                self.store.get_kv("cash", str(risk_cfg.capital.initial)) or risk_cfg.capital.initial
+            ),
             taker_fee=exchange_cfg.fees.taker,
             slippage_bps=exchange_cfg.slippage.base_bps,
         )

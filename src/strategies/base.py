@@ -55,4 +55,4 @@ class Strategy(ABC):
                 f"disponibles : {sorted(cls.presets)}"
             )
         params = {**cls.presets[preset], **overrides}
-        return cls(name=name, params=params)  # type: ignore[abstract]
+        return cls(name=name, params=params)

@@ -1,7 +1,7 @@
 # PROGRESS — état courant du projet
 
 **Dernière mise à jour :** 2026-07-06
-**Phase en cours :** Phase 9 — Tests, sécurité, qualité
+**Phase en cours :** Phase 10 — Documentation et passation
 
 ## État des phases
 
@@ -16,8 +16,8 @@
 | 6 | Validation anti-illusion | ✅ **0 validée / 38 rejetées** (VALIDATION_REPORT.md, ADR-004) |
 | 7 | Exécution / paper trading | ✅ (kill switch prouvé, run continu en accumulation — PHASE_7.md, PAPER_RUN_LOG.md) |
 | 8 | Monitoring et rapports | ✅ (rapport quotidien, shortfall, dashboard — PHASE_8.md) |
-| 9 | Tests, sécurité, qualité | 🔄 en cours |
-| 10 | Documentation et passation | ⬜ |
+| 9 | Tests, sécurité, qualité | ✅ (128 tests, couverture 91 %, mypy OK, pip-audit 0 vuln — PHASE_9.md) |
+| 10 | Documentation et passation | 🔄 en cours |
 
 ## Décisions prises (résumé — détail dans docs/adr/)
 
@@ -30,7 +30,7 @@
 
 ## TODO immédiat
 
-- [ ] Phase 9 : couverture ≥80 %, test intégration bout-en-bout, pip-audit, mypy modules cœur
+- [ ] Phase 10 : RUNBOOK, GO_LIVE_CHECKLIST, README final, PROGRESS final
 
 ## Verdict central du projet (Phase 6)
 

@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import time
 from dataclasses import dataclass
+from typing import Any
 
 import ccxt
 
@@ -117,7 +118,7 @@ class CcxtBroker:
         if mode == "testnet":
             self.exchange.set_sandbox_mode(True)
 
-    def _with_retries(self, fn, *args, **kwargs):
+    def _with_retries(self, fn: Any, *args: Any, **kwargs: Any) -> Any:
         delay = 2.0
         for attempt in range(self.MAX_RETRIES + 1):
             try:

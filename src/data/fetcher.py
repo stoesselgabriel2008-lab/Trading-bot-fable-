@@ -55,7 +55,10 @@ def _fetch_page_with_retries(
     delay = 2.0
     for attempt in range(_MAX_RETRIES + 1):
         try:
-            return exchange.fetch_ohlcv(symbol, timeframe, since=since, limit=_PAGE_LIMIT)
+            page: list[list[float]] = exchange.fetch_ohlcv(
+                symbol, timeframe, since=since, limit=_PAGE_LIMIT
+            )
+            return page
         except (ccxt.NetworkError, ccxt.ExchangeNotAvailable, ccxt.RequestTimeout) as exc:
             if attempt == _MAX_RETRIES:
                 raise
