@@ -1,7 +1,7 @@
 # PROGRESS — état courant du projet
 
 **Dernière mise à jour :** 2026-07-06
-**Phase en cours :** Phase 6 — Validation anti-illusion
+**Phase en cours :** Phase 7 — Exécution / paper trading
 
 ## État des phases
 
@@ -13,8 +13,8 @@
 | 3 | Pipeline de données | ✅ (9 ans BTC/ETH, corrélations quantifiées — PHASE_3.md) |
 | 4 | Moteur de backtest | ✅ (3 tests anti-lookahead + canari, écart réf. 0,84 % — PHASE_4.md) |
 | 5 | Stratégies | ✅ (7 familles + overlay + 2 baselines — PHASE_5.md) |
-| 6 | Validation anti-illusion | 🔄 en cours |
-| 7 | Exécution / paper trading | ⬜ |
+| 6 | Validation anti-illusion | ✅ **0 validée / 38 rejetées** (VALIDATION_REPORT.md, ADR-004) |
+| 7 | Exécution / paper trading | 🔄 en cours |
 | 8 | Monitoring et rapports | ⬜ |
 | 9 | Tests, sécurité, qualité | ⬜ |
 | 10 | Documentation et passation | ⬜ |
@@ -30,7 +30,16 @@
 
 ## TODO immédiat
 
-- [ ] Phase 6 : protocole complet de validation (WF, sensibilité, MC, DSR, régimes, stress) → VALIDATION_REPORT.md
+- [ ] Phase 7 : executor paper + robustesse + breakers + kill switch + Docker + run continu loggé
+
+## Verdict central du projet (Phase 6)
+
+**Aucune des 38 configurations stratégie × actif ne survit au protocole
+anti-illusion** (même après l'unique refonte vol-target autorisée par R3).
+Meilleures candidates rejetées : DonchianBreakout_VT et AtrBreakout_VT
+(Sharpe ≈ 1, DD < 20 %) — mais indistinguables d'une baseline aléatoire (C6)
+et P(hasard) ≥ 78 %. Le paper trading sert donc à valider l'infrastructure,
+avec étiquette explicite « stratégie NON validée — observation uniquement ».
 
 ## Limites connues (à ce stade)
 

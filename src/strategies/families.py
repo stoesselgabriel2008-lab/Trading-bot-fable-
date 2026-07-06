@@ -298,6 +298,34 @@ class VolTargetOverlay(Strategy):
         return (base * scale).fillna(0.0).clip(0.0, 1.0)
 
 
+def with_vol_target(
+    inner_cls: type[Strategy],
+    target_vol_annual: float = 0.25,
+    vol_window: int = 30,
+) -> type[Strategy]:
+    """Fabrique une variante « refonte » d'une famille : la stratégie sous-jacente
+    plafonnée par volatility targeting à paramètres FIXES (pas d'optimisation de
+    l'overlay — refonte unique et principielle autorisée par R3, motivée par la
+    recherche Phase 1, appliquée uniformément à toutes les familles)."""
+
+    class VolTargeted(Strategy):
+        param_space: ClassVar = inner_cls.param_space
+        presets: ClassVar[dict[str, dict[str, Any]]] = inner_cls.presets
+
+        def generate_targets(self, data: dict[str, pd.DataFrame]) -> pd.DataFrame:
+            inner = inner_cls(name="inner", params=self.params)
+            overlay = VolTargetOverlay(
+                name="vt",
+                params={"target_vol_annual": target_vol_annual, "vol_window": vol_window},
+                inner=inner,
+            )
+            return overlay.generate_targets(data)
+
+    VolTargeted.__name__ = f"{inner_cls.__name__}_VT"
+    VolTargeted.__qualname__ = VolTargeted.__name__
+    return VolTargeted
+
+
 FAMILIES: dict[str, type[Strategy]] = {
     "ema_cross": EmaCross,
     "donchian": DonchianBreakout,
