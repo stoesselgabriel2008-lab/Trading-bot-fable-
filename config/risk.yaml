@@ -1,0 +1,35 @@
+# ============================================================
+# LIMITES DE RISQUE — appliquées dans la couche d'exécution,
+# INDÉPENDAMMENT des stratégies (règle R8 de la mission).
+# Si une stratégie demande plus, l'exécuteur refuse et logge.
+# Toute modification de ces valeurs doit être justifiée par un ADR.
+# ============================================================
+
+capital:
+  # Capital initial du portefeuille paper (USDT).
+  initial: 10000.0
+
+limits:
+  # Taille max d'un ordre, en fraction du capital courant.
+  max_order_pct: 0.10
+  # Taille max d'une position par actif, en fraction du capital.
+  max_position_pct: 0.20
+  # Exposition totale max (somme des positions), en fraction du capital.
+  max_total_exposure_pct: 0.60
+  # Perte journalière max avant arrêt, en fraction du capital en début de journée.
+  max_daily_loss_pct: 0.03
+  # Drawdown max depuis le plus haut avant arrêt complet.
+  max_drawdown_pct: 0.15
+  # Levier interdit par défaut.
+  leverage_allowed: false
+
+circuit_breakers:
+  # N pertes consécutives -> pause du trading.
+  max_consecutive_losses: 5
+  pause_after_losses_minutes: 240
+  # Perte horaire max avant arrêt, en fraction du capital.
+  max_hourly_loss_pct: 0.02
+  # Taux d'erreurs API anormal -> arrêt (erreurs par fenêtre glissante).
+  max_api_errors_per_hour: 30
+  # Divergence position locale vs exchange -> arrêt + alerte (tolérance relative).
+  reconciliation_tolerance_pct: 0.01

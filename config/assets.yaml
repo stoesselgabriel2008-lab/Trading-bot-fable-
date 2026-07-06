@@ -1,0 +1,15 @@
+# Actifs suivis par le système. Liste extensible : ajouter une entrée suffit,
+# le pipeline de données et le moteur multi-actifs la prennent en compte.
+assets:
+  - symbol: BTC/USDT
+  - symbol: ETH/USDT
+  - symbol: SOL/USDT
+
+# Timeframes téléchargés et utilisables par les stratégies.
+timeframes:
+  - "1h"
+  - "4h"
+  - "1d"
+
+# Devise de référence du portefeuille.
+quote_currency: USDT

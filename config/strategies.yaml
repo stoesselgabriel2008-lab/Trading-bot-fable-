@@ -1,0 +1,5 @@
+# Stratégies actives et leurs paramètres.
+# Rempli en Phase 5 (implémentation) puis restreint en Phase 6 :
+# seules les stratégies VALIDÉES par la batterie anti-illusion
+# (docs/VALIDATION_REPORT.md) peuvent être activées en paper trading.
+strategies: []

@@ -1,0 +1,37 @@
+# Versions pinnées — vérifiées en direct sur PyPI le 2026-07-06 (pip index versions).
+# Justifications dans docs/adr/ADR-001-stack.md.
+
+# Connectivité exchange
+ccxt==4.5.64
+
+# Data / calcul
+# pandas 3.0.x est sorti mais très récent (changements majeurs : copy-on-write,
+# dtypes string) — on pinne la dernière 2.x pour la compatibilité de l'écosystème
+# (backtesting.py, vectorbt). Cf. ADR-001.
+pandas==2.3.3
+numpy==2.3.5
+pyarrow==24.0.0
+
+# Config / validation
+pydantic==2.13.4
+pydantic-settings==2.14.2
+PyYAML==6.0.3
+
+# Scheduling
+APScheduler==3.11.3
+
+# Backtest de référence (validation croisée du moteur maison, Phase 4)
+backtesting==0.6.5
+
+# Visualisation des rapports
+matplotlib==3.11.0
+
+# Tests / qualité
+pytest==9.1.1
+pytest-cov==7.1.0
+ruff==0.15.20
+mypy==2.1.0
+pip-audit==2.10.1
+
+# Utilitaires
+python-dotenv==1.2.2

@@ -1,0 +1,21 @@
+# Configuration exchange.
+# L'exchange principal sera confirmé en Phase 1 (ADR-002, critère n°1 : meilleur testnet).
+exchange:
+  id: binance          # provisoire — confirmé/ajusté par ADR-002 après recherche
+  # Mode d'exécution : paper | testnet | live
+  mode: paper
+  # VERROU DE SÉCURITÉ (règle R6) : le mode live exige live_trading=true ET
+  # la GO_LIVE_CHECKLIST complétée ET une confirmation explicite de l'utilisateur.
+  # Ce flag n'est JAMAIS activé par le bot lui-même.
+  live_trading: false
+
+fees:
+  # Frais par défaut (fraction, ex. 0.001 = 0.10 %) — valeurs RÉELLES
+  # vérifiées et sourcées en Phase 1 (docs/RESEARCH.md), ajustées ensuite.
+  maker: 0.001
+  taker: 0.001
+
+slippage:
+  # Slippage simulé en points de base, + composante proportionnelle au volume.
+  base_bps: 5.0
+  volume_impact: true

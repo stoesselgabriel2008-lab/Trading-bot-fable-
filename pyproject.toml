@@ -1,0 +1,28 @@
+[project]
+name = "trading-bot"
+version = "0.1.0"
+description = "Système de trading crypto multi-actifs, multi-stratégies, avec validation anti-illusion et paper trading"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["src/monitoring/dashboard*"]
