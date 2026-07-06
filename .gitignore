@@ -16,10 +16,11 @@ venv/
 htmlcov/
 coverage.xml
 
-# Données et état d'exécution (volumineux / locaux)
-data/
-state/
-logs/
+# Données et état d'exécution (volumineux / locaux) — ancrés à la racine
+# pour ne pas exclure src/data/ etc.
+/data/
+/state/
+/logs/
 *.parquet
 *.sqlite
 *.db
