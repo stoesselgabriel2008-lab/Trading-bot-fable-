@@ -1,7 +1,7 @@
 # PROGRESS — état courant du projet
 
 **Dernière mise à jour :** 2026-07-06
-**Phase en cours :** Phase 2 — Architecture
+**Phase en cours :** Phase 3 — Pipeline de données
 
 ## État des phases
 
@@ -9,8 +9,8 @@
 |---|---|---|
 | 0 | Initialisation | ✅ (docs/reports/PHASE_0.md) |
 | 1 | Recherche web massive | ✅ (52 recherches, 26 lectures — docs/reports/PHASE_1.md) |
-| 2 | Architecture | 🔄 en cours |
-| 3 | Pipeline de données | ⬜ |
+| 2 | Architecture | ✅ (docs/reports/PHASE_2.md) |
+| 3 | Pipeline de données | 🔄 en cours |
 | 4 | Moteur de backtest | ⬜ |
 | 5 | Stratégies | ⬜ |
 | 6 | Validation anti-illusion | ⬜ |
@@ -30,7 +30,7 @@
 
 ## TODO immédiat
 
-- [ ] Phase 2 : ARCHITECTURE.md + squelettes de modules + tests d'import
+- [ ] Phase 3 : fetch OHLCV (Binance public + Bybit), parquet, contrôle qualité, corrélations
 
 ## Notes de reprise (R13)
 
