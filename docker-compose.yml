@@ -1,0 +1,17 @@
+services:
+  trading-bot:
+    build: .
+    container_name: trading-bot-paper
+    restart: unless-stopped        # watchdog : redémarrage auto après crash
+    env_file:
+      - .env                       # optionnel en mode paper
+    volumes:
+      - ./data:/app/data
+      - ./state:/app/state
+      - ./logs:/app/logs
+      - ./docs/reports:/app/docs/reports
+    healthcheck:
+      test: ["CMD", "python", "-c", "import pathlib,time,sys; p=pathlib.Path('logs/trading_bot.log'); sys.exit(0 if p.exists() and time.time()-p.stat().st_mtime < 7200 else 1)"]
+      interval: 15m
+      timeout: 10s
+      retries: 3

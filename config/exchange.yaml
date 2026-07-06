@@ -13,7 +13,10 @@ exchange:
 # sans clé — historique spot le plus profond (2017+). Cohérence vérifiée vs Bybit.
 data:
   historical_source: binance_public
-  live_source: bybit
+  # ADR-002 addendum : Bybit est géo-bloqué depuis l'environnement cloud (IP US).
+  # Ici le paper consomme les données publiques Binance ; en production (France),
+  # remettre live_source: bybit (cf. RUNBOOK).
+  live_source: binance_public
 
 fees:
   # Frais spot tier de base Bybit ET Binance : 0,10 % maker / 0,10 % taker.

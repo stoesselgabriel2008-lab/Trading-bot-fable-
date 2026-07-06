@@ -1,7 +1,7 @@
 # PROGRESS — état courant du projet
 
 **Dernière mise à jour :** 2026-07-06
-**Phase en cours :** Phase 7 — Exécution / paper trading
+**Phase en cours :** Phase 8 — Monitoring et rapports
 
 ## État des phases
 
@@ -14,8 +14,8 @@
 | 4 | Moteur de backtest | ✅ (3 tests anti-lookahead + canari, écart réf. 0,84 % — PHASE_4.md) |
 | 5 | Stratégies | ✅ (7 familles + overlay + 2 baselines — PHASE_5.md) |
 | 6 | Validation anti-illusion | ✅ **0 validée / 38 rejetées** (VALIDATION_REPORT.md, ADR-004) |
-| 7 | Exécution / paper trading | 🔄 en cours |
-| 8 | Monitoring et rapports | ⬜ |
+| 7 | Exécution / paper trading | ✅ (kill switch prouvé, run continu en accumulation — PHASE_7.md, PAPER_RUN_LOG.md) |
+| 8 | Monitoring et rapports | 🔄 en cours |
 | 9 | Tests, sécurité, qualité | ⬜ |
 | 10 | Documentation et passation | ⬜ |
 
@@ -30,7 +30,7 @@
 
 ## TODO immédiat
 
-- [ ] Phase 7 : executor paper + robustesse + breakers + kill switch + Docker + run continu loggé
+- [ ] Phase 8 : rapport quotidien, shortfall backtest vs paper, dashboard HTML, alertes webhook
 
 ## Verdict central du projet (Phase 6)
 

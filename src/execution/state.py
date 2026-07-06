@@ -100,7 +100,12 @@ class StateStore:
 
     # ------------------------------------------------------------ ordres
     def record_order(
-        self, client_order_id: str, symbol: str, side: str, qty: float, price: float | None,
+        self,
+        client_order_id: str,
+        symbol: str,
+        side: str,
+        qty: float,
+        price: float | None,
         status: str = "pending",
     ) -> None:
         self.conn.execute(
