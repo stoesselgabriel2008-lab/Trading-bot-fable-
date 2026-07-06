@@ -1,7 +1,7 @@
 # PROGRESS — état courant du projet
 
 **Dernière mise à jour :** 2026-07-06
-**Phase en cours :** Phase 5 — Stratégies
+**Phase en cours :** Phase 6 — Validation anti-illusion
 
 ## État des phases
 
@@ -12,8 +12,8 @@
 | 2 | Architecture | ✅ (docs/reports/PHASE_2.md) |
 | 3 | Pipeline de données | ✅ (9 ans BTC/ETH, corrélations quantifiées — PHASE_3.md) |
 | 4 | Moteur de backtest | ✅ (3 tests anti-lookahead + canari, écart réf. 0,84 % — PHASE_4.md) |
-| 5 | Stratégies | 🔄 en cours |
-| 6 | Validation anti-illusion | ⬜ |
+| 5 | Stratégies | ✅ (7 familles + overlay + 2 baselines — PHASE_5.md) |
+| 6 | Validation anti-illusion | 🔄 en cours |
 | 7 | Exécution / paper trading | ⬜ |
 | 8 | Monitoring et rapports | ⬜ |
 | 9 | Tests, sécurité, qualité | ⬜ |
@@ -30,7 +30,7 @@
 
 ## TODO immédiat
 
-- [ ] Phase 5 : ≥6 familles de stratégies + 2 baselines + tests unitaires
+- [ ] Phase 6 : protocole complet de validation (WF, sensibilité, MC, DSR, régimes, stress) → VALIDATION_REPORT.md
 
 ## Limites connues (à ce stade)
 
