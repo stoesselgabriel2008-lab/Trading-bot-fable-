@@ -1,7 +1,7 @@
 # PROGRESS — état courant du projet
 
 **Dernière mise à jour :** 2026-07-06
-**Phase en cours :** Phase 8 — Monitoring et rapports
+**Phase en cours :** Phase 9 — Tests, sécurité, qualité
 
 ## État des phases
 
@@ -15,8 +15,8 @@
 | 5 | Stratégies | ✅ (7 familles + overlay + 2 baselines — PHASE_5.md) |
 | 6 | Validation anti-illusion | ✅ **0 validée / 38 rejetées** (VALIDATION_REPORT.md, ADR-004) |
 | 7 | Exécution / paper trading | ✅ (kill switch prouvé, run continu en accumulation — PHASE_7.md, PAPER_RUN_LOG.md) |
-| 8 | Monitoring et rapports | 🔄 en cours |
-| 9 | Tests, sécurité, qualité | ⬜ |
+| 8 | Monitoring et rapports | ✅ (rapport quotidien, shortfall, dashboard — PHASE_8.md) |
+| 9 | Tests, sécurité, qualité | 🔄 en cours |
 | 10 | Documentation et passation | ⬜ |
 
 ## Décisions prises (résumé — détail dans docs/adr/)
@@ -30,7 +30,7 @@
 
 ## TODO immédiat
 
-- [ ] Phase 8 : rapport quotidien, shortfall backtest vs paper, dashboard HTML, alertes webhook
+- [ ] Phase 9 : couverture ≥80 %, test intégration bout-en-bout, pip-audit, mypy modules cœur
 
 ## Verdict central du projet (Phase 6)
 

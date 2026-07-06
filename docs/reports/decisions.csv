@@ -1,0 +1,13 @@
+ts,kind,symbol,payload
+2026-07-06T15:38:32.869743+00:00,target,,"{""strategy"": ""DonchianBreakout_VT[balanced] — STRATÉGIE NON VALIDÉE (VALIDATION_REPORT.md) — observation d'infrastructure uniquement"", ""targets"": {""BTC/USDT"": 0.0, ""ETH/USDT"": 0.0, ""SOL/USDT"": 0.0}, ""equity"": 10000.0}"
+2026-07-06T15:38:32.875397+00:00,no_trade,,"{""reason"": ""poids dans la tolérance""}"
+2026-07-06T15:38:33.895895+00:00,target,,"{""strategy"": ""DonchianBreakout_VT[balanced] — STRATÉGIE NON VALIDÉE (VALIDATION_REPORT.md) — observation d'infrastructure uniquement"", ""targets"": {""BTC/USDT"": 0.0, ""ETH/USDT"": 0.0, ""SOL/USDT"": 0.0}, ""equity"": 10000.0}"
+2026-07-06T15:38:33.902551+00:00,no_trade,,"{""reason"": ""poids dans la tolérance""}"
+2026-07-06T15:38:34.814584+00:00,target,,"{""strategy"": ""DonchianBreakout_VT[balanced] — STRATÉGIE NON VALIDÉE (VALIDATION_REPORT.md) — observation d'infrastructure uniquement"", ""targets"": {""BTC/USDT"": 0.0, ""ETH/USDT"": 0.0, ""SOL/USDT"": 0.0}, ""equity"": 10000.0}"
+2026-07-06T15:38:34.823071+00:00,no_trade,,"{""reason"": ""poids dans la tolérance""}"
+2026-07-06T15:38:56.089461+00:00,kill,,"{""reason"": ""kill switch flag présent""}"
+2026-07-06T15:38:56.096236+00:00,kill,,"{""reason"": ""kill switch flag présent""}"
+2026-07-06T15:39:00.688719+00:00,target,,"{""strategy"": ""DonchianBreakout_VT[balanced] — STRATÉGIE NON VALIDÉE (VALIDATION_REPORT.md) — observation d'infrastructure uniquement"", ""targets"": {""BTC/USDT"": 0.0, ""ETH/USDT"": 0.0, ""SOL/USDT"": 0.0}, ""equity"": 10000.0}"
+2026-07-06T15:39:00.699645+00:00,no_trade,,"{""reason"": ""poids dans la tolérance""}"
+2026-07-06T15:39:18.885541+00:00,target,,"{""strategy"": ""DonchianBreakout_VT[balanced] — STRATÉGIE NON VALIDÉE (VALIDATION_REPORT.md) — observation d'infrastructure uniquement"", ""targets"": {""BTC/USDT"": 0.0, ""ETH/USDT"": 0.0, ""SOL/USDT"": 0.0}, ""equity"": 10000.0}"
+2026-07-06T15:39:18.894901+00:00,no_trade,,"{""reason"": ""poids dans la tolérance""}"
