@@ -1,7 +1,7 @@
 # PROGRESS — état courant du projet
 
 **Dernière mise à jour :** 2026-07-06
-**Phase en cours :** Phase 3 — Pipeline de données
+**Phase en cours :** Phase 4 — Moteur de backtest
 
 ## État des phases
 
@@ -10,8 +10,8 @@
 | 0 | Initialisation | ✅ (docs/reports/PHASE_0.md) |
 | 1 | Recherche web massive | ✅ (52 recherches, 26 lectures — docs/reports/PHASE_1.md) |
 | 2 | Architecture | ✅ (docs/reports/PHASE_2.md) |
-| 3 | Pipeline de données | 🔄 en cours |
-| 4 | Moteur de backtest | ⬜ |
+| 3 | Pipeline de données | ✅ (9 ans BTC/ETH, corrélations quantifiées — PHASE_3.md) |
+| 4 | Moteur de backtest | 🔄 en cours |
 | 5 | Stratégies | ⬜ |
 | 6 | Validation anti-illusion | ⬜ |
 | 7 | Exécution / paper trading | ⬜ |
@@ -30,7 +30,14 @@
 
 ## TODO immédiat
 
-- [ ] Phase 3 : fetch OHLCV (Binance public + Bybit), parquet, contrôle qualité, corrélations
+- [ ] Phase 4 : moteur de backtest + 3 tests anti-lookahead obligatoires
+
+## Limites connues (à ce stade)
+
+- Bybit géo-bloqué depuis l'environnement cloud (IP US) : paper trading sur données
+  publiques Binance ici ; Bybit EU OK depuis la France (cf. ADR-002 addendum).
+- Corrélation BTC-ETH mesurée à 0,805 : diversification multi-actifs partiellement
+  illusoire — pris en compte via la limite d'exposition totale.
 
 ## Notes de reprise (R13)
 

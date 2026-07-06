@@ -38,3 +38,19 @@ licence MiCA (CoinDesk 26/06/2026, Euronews 25/06/2026). L'utilisateur est en Fr
 - Si Bybit EU restreignait davantage : bascule OKX (alternative documentée).
 - Risque assumé : divergences mineures de prix Binance (historique) vs Bybit (exécution)
   — mesurées en Phase 3, intégrées au stress des coûts si significatives.
+
+## Addendum (Phase 3, 2026-07-06) — environnement d'exécution cloud
+
+Constaté à l'exécution : l'API Bybit est géo-bloquée (CloudFront 403 « block access
+from your country ») depuis l'IP de sortie de l'environnement cloud (États-Unis —
+Bybit bloque les résidents US), et le endpoint futures Binance renvoie 451. L'endpoint
+spot public `data-api.binance.vision` fonctionne (200).
+
+Conséquences :
+- Dans CET environnement, le paper trading consomme les **données publiques Binance**
+  (aucune clé) — le mode paper est purement local, ce choix ne change ni les stratégies
+  ni le risk management.
+- Chez l'utilisateur (France), Bybit EU est accessible : la config d'exécution Bybit
+  reste valable pour le déploiement réel (RUNBOOK).
+- La comparaison croisée Binance/Bybit des séries est reportée à un environnement
+  non géo-bloqué ; ce point est tracé comme limite connue dans PROGRESS.md.
