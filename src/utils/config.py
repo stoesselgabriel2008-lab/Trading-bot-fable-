@@ -73,6 +73,11 @@ class ExchangeSection(_FrozenModel):
     live_trading: bool
 
 
+class DataSourceConfig(_FrozenModel):
+    historical_source: str
+    live_source: str
+
+
 class FeesConfig(_FrozenModel):
     maker: float = Field(ge=0, lt=0.05)
     taker: float = Field(ge=0, lt=0.05)
@@ -85,6 +90,7 @@ class SlippageConfig(_FrozenModel):
 
 class ExchangeConfig(_FrozenModel):
     exchange: ExchangeSection
+    data: DataSourceConfig
     fees: FeesConfig
     slippage: SlippageConfig
 

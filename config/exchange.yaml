@@ -1,7 +1,7 @@
 # Configuration exchange.
-# L'exchange principal sera confirmé en Phase 1 (ADR-002, critère n°1 : meilleur testnet).
+# Choix arrêté par ADR-002 (2026-07-06) : Bybit (licence MiCA France + testnet & demo mainnet).
 exchange:
-  id: binance          # provisoire — confirmé/ajusté par ADR-002 après recherche
+  id: bybit
   # Mode d'exécution : paper | testnet | live
   mode: paper
   # VERROU DE SÉCURITÉ (règle R6) : le mode live exige live_trading=true ET
@@ -9,9 +9,15 @@ exchange:
   # Ce flag n'est JAMAIS activé par le bot lui-même.
   live_trading: false
 
+# Source des données historiques de backtest (ADR-002) : API publique Binance,
+# sans clé — historique spot le plus profond (2017+). Cohérence vérifiée vs Bybit.
+data:
+  historical_source: binance_public
+  live_source: bybit
+
 fees:
-  # Frais par défaut (fraction, ex. 0.001 = 0.10 %) — valeurs RÉELLES
-  # vérifiées et sourcées en Phase 1 (docs/RESEARCH.md), ajustées ensuite.
+  # Frais spot tier de base Bybit ET Binance : 0,10 % maker / 0,10 % taker.
+  # Vérifiés le 2026-07-06 (2 sources chacun, cf. docs/RESEARCH.md §2).
   maker: 0.001
   taker: 0.001
 
